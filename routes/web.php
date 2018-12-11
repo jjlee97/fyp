@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', function() {
+    return "This is login page";
+});
+
+//testing on resource 
+Route::resource('/post', 'PostController');
+
+
+Route::group(['middleware' => ['web']], function() {
+    //
+});
