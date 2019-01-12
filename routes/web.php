@@ -12,11 +12,15 @@
 */
 
 Route::get('/', function () {
+    return view('login');
+});
+
+Route::get('/index', function() {
     return view('index');
 });
 
-Route::get('/login', function() {
-    return view('login');
+Route::get('/blank', function() {
+    return view('blank');
 });
 
 //testing on resource 
