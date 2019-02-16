@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,17 +11,16 @@
 */
 
 Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/login', function() {
     return view('login');
 });
-
+Route::get('/index', function() {
+    return view('index');
+});
+Route::get('/blank', function() {
+    return view('blank');
+});
 //testing on resource 
 Route::resource('/post', 'PostController');
-
-
 Route::group(['middleware' => ['web']], function() {
     //
 });
